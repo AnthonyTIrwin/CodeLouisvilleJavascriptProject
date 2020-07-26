@@ -1,14 +1,26 @@
-let fromapi = fetch('http://api.openweathermap.org/data/2.5/weather?q=Louisville,us&APPID=6368a49d701b9248d5d30b549448ea4a')
-.then(function(res){console.log(res.json())})
 
+//event handler that runs getWeatherData function when button is clicked.
 document.getElementById('displaydata')
-.addEventListener('click', getText);
+.addEventListener('click', getWeatherData);
 
-function getText(){
-  console.log(fromapi);
-    document.getElementById("headerone")
-    .innerHTML = "<h1>" + fromapi + "</h1>"
+
+//Function that assigns inputed text from zipinput to zip variable.
+function zipfunction() {
+
+    zip = document.getElementById("zipinput").value
+
+    console.log(zip)
+
+    getWeatherData()
+   
 }
 
-
-
+//function that fetches openweather API with the zip variable inserted into the html address. The API returns area data. 
+function getWeatherData(){
+     // fetch('http://api.openweathermap.org/data/2.5/weather?q=Louisville,us&APPID=f360ccaab20b5b1f7087127ed1a6d955')
+      fetch('https://api.openweathermap.org/data/2.5/weather?zip=' + zip +',us&APPID=f360ccaab20b5b1f7087127ed1a6d955')
+      .then((res) => res.json())
+      .then((data) => {
+        console.log(data.main.temp)
+        document.getElementById('weatherdiv').innerHTML = "The temperature in " + data.name + " right now is" + " " + data.main.temp + " " + "Kelvin";
+      })}

@@ -5,19 +5,37 @@
       <link href="style.css" rel="stylesheet" type="text/css" />
       <meta charset="utf-8">
     
-    <title>repl.it</title>
+    <title>JavascriptWeatherApp</title>
     
-</head>  <body>      
+</head> 
 
-    
-    <h1 id = "headerone">Add Equipment</h1>
+<body>      
+  <h1 id = "headerone">What's the Temperature?</h1>
+  <br>
+  Enter your zip code: <input id="zipinput" type="number" name="number" oninput="zipfunction()">
+  
     <br>
+    <div >
 
-<button id="displaydata">Display Data</button>
+<button id="displaydata">Display Louiville's Temperature</button>
+<li id = "weatherdiv">
 
+</li>
       
 </div>
 
+<p>Input Temperature in Kalvin to convert to a more relatable measure:</p>
+
+<form id = "converter">
+  <label for="far">Enter Temperature in Kalvin Here:</label><br>
+  <input type="text" id="fname" name="fname" value="Temp in Degrees K"><br>
+  <input type="radio" id="faranheit" name="Faranheit" value="Faranheit">
+  <label for="male">F</label><br>
+  <input type="radio" id="celcius" name="Celcius" value="Celcius">
+  <label for="female">C</label><br>
+  
+  <input type="submit" value="Submit" onclick= "convertit()">
+</form>
 
   
 <script src="script.js"></script>

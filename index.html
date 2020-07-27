@@ -26,15 +26,19 @@
 
 <p>Input Temperature in Kalvin to convert to a more relatable measure:</p>
 
-<form id = "converter">
-  <label for="far">Enter Temperature in Kalvin Here:</label><br>
-  <input type="text" id="fname" name="fname" value="Temp in Degrees K"><br>
-  <input type="radio" id="faranheit" name="Faranheit" value="Faranheit">
-  <label for="male">F</label><br>
-  <input type="radio" id="celcius" name="Celcius" value="Celcius">
-  <label for="female">C</label><br>
+<label for="far">Enter Temperature in Kalvin Here:</label><br>
+  <form id = "converter">
+  <input type="text" id="fname"><br>
+  <form>
+    What standard would you like to use?<br>
+    <input type="radio" name="temps" id="faranheit">Faranheit<br>
+    <input type="radio" name="temps" id="celcius">Celcius
+  </form>
+
   
-  <input type="submit" value="Submit" onclick= "convertit()">
+  <input type="submit" value="Submit" onclick= "radiotempcheck()">
+
+  <div id="dataoutput"></div>
 </form>
 
   

@@ -24,3 +24,26 @@ function getWeatherData(){
         console.log(data.main.temp)
         document.getElementById('weatherdiv').innerHTML = "The temperature in " + data.name + " right now is" + " " + data.main.temp + " " + "Kelvin";
       })}
+
+function radiotempcheck() {
+    if (document.getElementById("faranheit").checked){
+contemp = document.getElementById('fname').value
+findegree = parseFloat(contemp)
+console.log(contemp)
+document.getElementById('dataoutput').innerHTML =  ((findegree-273.15)*1.8)+32
+    }
+     else if (document.getElementById('celcius').checked)
+        {
+
+        contemp = document.getElementById('fname').value     
+        findegree = parseFloat(contemp)
+
+        document.getElementById('dataoutput').innerHTML = findegree - 273.15
+        }
+
+            }
+
+
+
+
+

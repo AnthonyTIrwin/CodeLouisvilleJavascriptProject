@@ -5,13 +5,35 @@ document.getElementById('displaydata')
 
 
 //Function that assigns inputed text from zipinput to zip variable.
+
+ const zipregex = /^\d{5}$/; 
+
+
+// function zipregexval() {
+
+
+//     zip = document.getElementById('zipinput').value
+
+//     zipfunction()
+      
+//     }
+
+
+
+
+
+
+// }
+
 function zipfunction() {
-
+    
+    
     zip = document.getElementById("zipinput").value
-
-    console.log(zip)
-
+    
+    
+    
     getWeatherData()
+
    
 }
 

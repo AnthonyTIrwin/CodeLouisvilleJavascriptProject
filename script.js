@@ -3,23 +3,23 @@
 
 //implementation of regex on zip code input, only 5 characters. 
 function zipfunction() {  
-    zip = document.getElementById("zipinput").value
+    zip = document.getElementById('zipinput').value
     var regex = /^\d{1,5}$/;
     if (regex.test(zip)){
         console.log("true")
         
         //calls getweatherdataunction
         getWeatherData() 
+        getplotdata()
     }
     else
     {
         console.log("false")
-        document.getElementById('weatherdiv') = "Please Input a Valid Zip Code"
+        document.getElementById('weatherdiv').innerHTML = "Please Input a Valid Zip Code"
     }
 }
 //function that fetches openweather API with the zip variable inserted into the html address. The API returns area data. 
 function getWeatherData(){
-     // fetch('http://api.openweathermap.org/data/2.5/weather?q=Louisville,us&APPID=f360ccaab20b5b1f7087127ed1a6d955')
       fetch('https://api.openweathermap.org/data/2.5/weather?zip=' + zip +',us&APPID=f360ccaab20b5b1f7087127ed1a6d955')
       .then((res) => res.json())
       .then((data) => {
@@ -35,14 +35,15 @@ function radiotempcheck() {
 contemp = document.getElementById('fname').value
 findegree = parseFloat(contemp)
 console.log(contemp)
-document.getElementById('dataoutput').innerHTML =  Math.round(((findegree-273.15)*1.8)+32)
+document.getElementById('dataoutput').innerHTML =  Math.round(((findegree-273.15)*1.8)+32) + " F"
     }
      else if (document.getElementById('celcius').checked)
         {
             contemp = document.getElementById('fname').value     
             findegree = parseFloat(contemp)
-            document.getElementById('dataoutput').innerHTML = Math.round(findegree - 273.15)
+            document.getElementById('dataoutput').innerHTML = Math.round(findegree - 273.15) + " C" 
         }
+        
     }
     //arrays for x and y data
 
@@ -54,24 +55,24 @@ document.getElementById('dataoutput').innerHTML =  Math.round(((findegree-273.15
     function getplotdata(){
         fetch('http://api.openweathermap.org/data/2.5/forecast?q=louisville&appid=f360ccaab20b5b1f7087127ed1a6d955')
         .then((res) => res.json())
-        .then((data)=> {
+        .then((data)=> {  
             
-            
-            for (i = 0; i < data.list.length; i++) {
-                
+            for (i = 0; i < data.list.length; i++) {          
+                var layout = {
+                    title:"Temperature in K Over Time"}
             yarr.push(data.list[i].main.temp)
-            //  console.log(yarr)
             xarr.push(data.list[i].dt_txt)
             TESTER = document.getElementById('tester');
             Plotly.newPlot( TESTER, [{
             x: xarr,
             y: yarr }], {
-            margin: { t: 0 } } );
+            margin: { t: 0 } }, layout );
+              };
 
-            document.getElementById('graphbox').innerhtml = "what's this?"
+          
     }
     
-});
+);
 
     }
 

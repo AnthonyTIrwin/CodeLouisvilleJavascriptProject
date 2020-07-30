@@ -13,3 +13,7 @@ the submit button.
 
 And Finally, upon hitting the graphing button, a temerature over time graph is produced, showing
 intervals of three hours, over the course of several days.   The temperature is graphed in Kelvin. 
+
+The app can be executed by placing files in a local directory and then running the index.html file
+in a web browser.
+

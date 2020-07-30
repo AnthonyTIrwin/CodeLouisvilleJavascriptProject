@@ -11,26 +11,22 @@
 </head> 
 
 <body>      
-  <h1 id = "headerone">What's the Temperature?</h1>
-  <br>
-  
-  
-  <p>Enter your zip code:</p> <input id="zipinput" type="number" name="number" oninput="zipfunction()">
-  
+  <h1 id = "headerone">What's the Weather?</h1>
+    <br>
+    <p>Enter your zip code:</p> <input id="zipinput" type="number" name="number">
+  <button id="zipbutton" onclick="zipfunction()">Click Here for Local Weather</button>
     <br>
     <div >
+      <div id = "weatherdiv">  
+      </div>
+      <p>To convert, input Temperature and then choose Faranheit or Celcius:</p>
 
-<div id = "weatherdiv">
-
-
-      
-</div>
-
-<p>Input Temperature in Kelvin to convert to a more relatable measure:</p>
-
-<label for="far">Enter Temperature in Kelvin Here:</label><br>
+    <label for="far">Enter Temperature in Kelvin Here:</label><br>
   <form id = "converter">
-  <input type="text" id="fname"><br>
+    <br>
+  <input type="text" id="fname">
+  <br>
+  <br>
   <form>
     What standard would you like to use?<br>
     <input type="radio" name="temps" id="faranheit">Faranheit<br>
@@ -41,8 +37,6 @@
   <input type="submit" value="Submit" onclick= "radiotempcheck()">
 
   <div id="dataoutput"></div>
-
-  <button id = "chartbutton" onclick = "getplotdata()">Click for Chart</button>
 
   <div id="ydata"></div>
 <div id="graphbox">

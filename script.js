@@ -8,7 +8,7 @@ function zipfunction() {
     if (regex.test(zip)){
         console.log("true")
         
-        //calls getweatherdataunction
+//calls functions
         getWeatherData() 
         getplotdata()
     }
@@ -35,22 +35,22 @@ function radiotempcheck() {
 contemp = document.getElementById('fname').value
 findegree = parseFloat(contemp)
 console.log(contemp)
-document.getElementById('dataoutput').innerHTML =  Math.round(((findegree-273.15)*1.8)+32) + " F"
+document.getElementById('dataoutput').innerHTML =  contemp + " K is " + Math.round(((findegree-273.15)*1.8)+32) + " F"
     }
      else if (document.getElementById('celcius').checked)
         {
             contemp = document.getElementById('fname').value     
             findegree = parseFloat(contemp)
-            document.getElementById('dataoutput').innerHTML = Math.round(findegree - 273.15) + " C" 
+            document.getElementById('dataoutput').innerHTML = contemp + " K is " + Math.round(findegree - 273.15) + " C" 
         }
         
     }
-    //arrays for x and y data
+//arrays for x and y data
 
     let xarr = []
     let yarr = []
     
-    //function for retreiving and grahing api data from second api with 5-day weather data, every three hours.
+//function for retreiving and grahing api data from second api with 5-day weather data, every three hours.
 
     function getplotdata(){
         fetch('http://api.openweathermap.org/data/2.5/forecast?q=louisville&appid=f360ccaab20b5b1f7087127ed1a6d955')
@@ -63,11 +63,11 @@ document.getElementById('dataoutput').innerHTML =  Math.round(((findegree-273.15
             yarr.push(data.list[i].main.temp)
             xarr.push(data.list[i].dt_txt)
             TESTER = document.getElementById('tester');
-            Plotly.newPlot( TESTER, [{
-            x: xarr,
-            y: yarr }], {
-            margin: { t: 0 } }, layout );
-              };
+                Plotly.newPlot( TESTER, [{
+                x: xarr,
+                y: yarr }], {
+                margin: { t: 0 } }, layout );
+                  };
 
           
     }

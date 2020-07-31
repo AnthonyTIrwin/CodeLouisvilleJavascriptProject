@@ -1,5 +1,40 @@
 #weatherdiv {
     
-    padding: 5em;
+    padding: 1em;
+    border-radius: 25px 25px;
     background-color: lightblue;
+    font-size: 35px;
+  }
+
+  #inputzip {
+       
+       padding: 15px;
+       background-color: burlywood;
+       font-size: 35px;
+       border-radius:25px;
+       
+
+
+  }
+
+  #tempdiv {
+    padding: 15px;
+    background-color: rgb(218, 218, 197);
+    border-radius:25px;
+    font-size: 20px;
+
+  }
+
+  #dataoutput {
+
+    padding: 15px;
+    background-color: lightskyblue;
+    border-radius: 25px;
+  }
+
+  #tester {
+
+    padding: 15px;
+    background-color: lightseagreen;
+
   }

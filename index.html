@@ -10,40 +10,39 @@
     
 </head> 
 
-<body>      
-  <h1 id = "headerone">What's the Weather?</h1>
-    <br>
-    <p>Enter your zip code:</p> <input id="zipinput" type="number" name="number">
-  <button id="zipbutton" onclick="zipfunction()">Click Here for Local Weather</button>
-    <br>
-    <div >
-      <div id = "weatherdiv">  
-      </div>
-      <p>To convert, input Temperature and then choose Faranheit or Celcius:</p>
-
-      <label for="far">Enter Temperature in Kelvin Here:</label><br>
-      <form id = "converter">
+<!-- main body -->
+  <body>      
+    <h1 id = "headerone">What's the Weather?</h1>
       <br>
-      <input type="text" id="fname">
-      <br>
-      <br>
-      <form>
-    What standard would you like to use?<br>
-    <input type="radio" name="temps" id="faranheit">Faranheit<br>
-    <input type="radio" name="temps" id="celcius">Celcius
-  </form>
+<!-- Zip Code Input Div -->
+      <div id= "inputzip"><p>Enter your zip code:</p> <input id="zipinput" type="number" name="number">
+        <button id="zipbutton" onclick="zipfunction()">Click Here for Local Weather</button>
+        <br>
+        <div id = "weatherdiv"></div>
+<!-- Temperature Converter Div -->
+        <div id = tempdiv>
+          <p>To convert temperature from Kelvin, input themperature and then choose Faranheit or Celcius:</p>
+          <label for="far">Enter Temperature in Kelvin Here:</label><br>
+          <form id = "converter">  
+          <input type="number" id="fname">
+          <br>
+          <br>
+          <form>
+          <input type="radio" name="temps" id="faranheit">Faranheit
+          <input type="radio" name="temps" id="celcius">Celcius
+          </form>
 
   
-  <input type="submit" value="Submit" onclick= "radiotempcheck()">
-  </form>
-  
-  <div id="dataoutput"></div>
+          <input type="submit" value="Convert" onclick= "radiotempcheck()">
+          </form>
+        <div id="dataoutput"></div>
+        </div>
 
-
-  <div id="tester" background-color="green" style="width:600px;height:250px;"></div>
+<!-- Graphed 5-Day Temperature Report -->
+  <div id="tester" style="width:600px;height:250px;"></div>
 
 
   
 <script src="script.js"></script>
-  </body>
+</body>
 </html>

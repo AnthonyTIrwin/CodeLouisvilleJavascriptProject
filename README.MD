@@ -1,7 +1,7 @@
-README.TXT
 
 
-This is a Javascript Weather Dashboard.
+
+# This is a Javascript Weather Dashboard.
 
 # Retreive from Current Conditions API
 

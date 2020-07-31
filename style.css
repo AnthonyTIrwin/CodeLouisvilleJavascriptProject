@@ -1,4 +1,15 @@
 
+/* Centering Header */
+#headerone {
+
+    text-align: center;
+}
+
+p {
+    margin: auto;
+}
+
+
 /* Div for Weather */
 #weatherdiv {
     margin: auto;
@@ -6,6 +17,7 @@
     border-radius: 25px 25px;
     background-color: lightblue;
     font-size: 35px;
+    text-align: center;
   }
 /* Division for Input */
   #inputzip {
@@ -15,6 +27,12 @@
        font-size: 35px;
        border-radius:25px;
 
+  }
+
+  #converter {
+
+    margin: auto;
+    left: 50;
   }
 /* Div for Temperature Conversion */
   #tempdiv {
@@ -32,6 +50,8 @@
     padding: 15px;
     background-color: lightskyblue;
     border-radius: 25px;
+    margin: auto;
+    
   }
 /* graph */
   #tester {
@@ -41,3 +61,9 @@
     margin: auto;
 
   }
+
+ footer {
+
+    text-align: center;
+
+ }

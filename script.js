@@ -35,13 +35,13 @@ function radiotempcheck() {
 contemp = document.getElementById('fname').value
 findegree = parseFloat(contemp)
 console.log(contemp)
-document.getElementById('dataoutput').innerHTML =  contemp + " K is " + Math.round(((findegree-273.15)*1.8)+32) + " F"
+document.getElementById('dataoutput').innerHTML =  Math.round(((findegree-273.15)*1.8)+32) + " F"
     }
      else if (document.getElementById('celcius').checked)
         {
             contemp = document.getElementById('fname').value     
             findegree = parseFloat(contemp)
-            document.getElementById('dataoutput').innerHTML = contemp + " K is " + Math.round(findegree - 273.15) + " C" 
+            document.getElementById('dataoutput').innerHTML = Math.round(findegree - 273.15) + " C" 
         }
         
     }

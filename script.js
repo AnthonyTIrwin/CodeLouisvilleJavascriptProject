@@ -10,7 +10,7 @@ function zipfunction() {
         
 //calls functions
         getWeatherData() 
-        getplotdata()
+        getplotdata(zip)
     }
     else
     {
@@ -53,7 +53,9 @@ document.getElementById('dataoutput').innerHTML =  contemp + " K is " + Math.rou
 //function for retreiving and grahing api data from second api with 5-day weather data, every three hours.
 
     function getplotdata(){
-        fetch('http://api.openweathermap.org/data/2.5/forecast?q=louisville&appid=f360ccaab20b5b1f7087127ed1a6d955')
+//        fetch('http://api.openweathermap.org/data/2.5/forecast?q=louisville&appid=f360ccaab20b5b1f7087127ed1a6d955')
+        fetch('http://api.openweathermap.org/data/2.5/forecast?zip=' + zip + ',us&appid=f360ccaab20b5b1f7087127ed1a6d955')
+
         .then((res) => res.json())
         .then((data)=> {  
             

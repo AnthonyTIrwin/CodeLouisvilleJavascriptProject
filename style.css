@@ -1,40 +1,43 @@
+
+/* Div for Weather */
 #weatherdiv {
-    
+    margin: auto;
     padding: 1em;
     border-radius: 25px 25px;
     background-color: lightblue;
     font-size: 35px;
   }
-
+/* Division for Input */
   #inputzip {
-       
+       margin: auto;
        padding: 15px;
        background-color: burlywood;
        font-size: 35px;
        border-radius:25px;
-       
-
 
   }
-
+/* Div for Temperature Conversion */
   #tempdiv {
+    
+    margin: auto;
     padding: 15px;
     background-color: rgb(218, 218, 197);
     border-radius:25px;
     font-size: 20px;
-
+    margin: auto;
   }
-
+/* Converted temperature output */
   #dataoutput {
 
     padding: 15px;
     background-color: lightskyblue;
     border-radius: 25px;
   }
-
+/* graph */
   #tester {
 
     padding: 15px;
     background-color: lightseagreen;
+    margin: auto;
 
   }
